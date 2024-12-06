@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.header-logo img {
+  width: 100px; /* Smaller logo size */
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  color: white;
+  margin-top: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: #f8b400;
+  border-radius: 5px;
+}
+
+/* Gallery Section */
+.cake-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.cake-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cake-item p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* About Us Section */
+.about-us img {
+  width: 100%; /* Makes the image span the full width of the container */
+  max-width: 500px; /* Limits the width to a max of 500px to keep it proportional */
+  display: block;
+  margin: 0 auto; /* Centers the image */
+  border-radius: 8px; /* Optional: adds rounded corners to match the style of other images */
+}
+
+
+/* Why Choose Us */
+.why-choose-us video {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Contact Us Section */
+.contact-us a {
+  color: #f8b400;
+  text-decoration: none;
+}
+
+.contact-us a:hover {
+  color: #f88b00;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .cake-gallery {
+    grid-template-columns: 1fr;
+  }
+}
