@@ -1,4 +1,35 @@
-/* General Styles */
+ /* Other existing styles */
+
+/* Add the new keyframes and header animation styles here */
+@keyframes moveTextLoop {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+  animation: moveTextLoop 10s linear infinite;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+
+.hero-title {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+  animation: moveText 3s ease-in-out;
+}
+                                              /* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,7 +39,7 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: green;
   color: white;
   text-align: center;
   padding: 20px;
@@ -57,7 +88,10 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+  background-color: black; /* Adds a black background */
+  color: white; /* Ensures text is visible on the black background */
 }
+
 
 .cake-item img {
   width: 100%;
@@ -71,17 +105,28 @@ header {
 .gallery-description {
   text-align: center;
   font-size: 1.1rem;
-  color: #666;
+  color: white; /* Change text color to white for better visibility on a black background */
   margin-top: 10px;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
+  background-color: black; /* Adds a black background */
+  padding: 10px; /* Adds padding to avoid text touching the edges */
+  border-radius: 5px; /* Optional: Adds rounded corners for a cleaner look */
 }
+
 
 /* Services Section */
 .services {
   text-align: center;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: #black;
+}
+
+.service-item {
+  background-color:white; /* Sets the background to black */
+  color: black; /* Optional: Adjusts text color to ensure visibility */
+  padding: 20px; /* Optional: Adds spacing around the content */
+  border-radius: 8px; /* Keeps the rounded corners */
 }
 
 .service-item img {
@@ -90,7 +135,14 @@ header {
   border-radius: 8px;
 }
 
+
 /* About Us Section */
+.about-us {
+  background-color: black; /* Sets the background color to black */
+  color: white; /* Changes the text color to white for better visibility */
+  padding: 20px; /* Adds padding around the content */
+}
+
 .about-us img {
   width: 100%; /* Makes the image span the full width of the container */
   max-width: 500px; /* Limits the width to a max of 500px to keep it proportional */
@@ -100,20 +152,37 @@ header {
 }
 
 
-/* Why Choose Us */
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: black; /* Sets the background color to black */
+  color: white; /* Ensures text is visible against the black background */
+  padding: 20px; /* Adds padding around the content */
+}
+
 .why-choose-us video {
   width: 100%;
-  max-width: 500px;
+  max-width: 500px; /* Limits the width to a max of 500px */
   display: block;
-  margin: 0 auto;
-  border-radius: 10px;
+  margin: 0 auto; /* Centers the video */
+  border-radius: 10px; /* Optional: adds rounded corners */
 }
 
 /* Contact Us Section */
-.contact-us a {
-  color: #f8b400;
-  text-decoration: none;
+.contact-us {
+  background-color: black; /* Sets the background color to black */
+  color: white; /* Ensures text is visible against the black background */
+  padding: 20px; /* Adds padding inside the section for spacing */
 }
+
+.contact-us a {
+  color: #f8b400; /* Keeps the link color as yellow */
+  text-decoration: none; /* Removes the underline from links */
+}
+
+.contact-us a:hover {
+  color: #f88b00; /* Changes the link color when hovered */
+}
+
 
 .contact-us a:hover {
   color: #black;
@@ -121,8 +190,8 @@ header {
 
 /* Footer */
 footer {
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   padding: 10px;
 }
@@ -155,4 +224,42 @@ footer {
 .whatsapp-icon:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+}
+@keyframes snake-move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.letter {
+  display: inline-block;
+  animation: snake-move 2s ease-in-out infinite;
+}
+
+.letter:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.letter:nth-child(even) {
+  animation-delay: 0.4s;
+}  header {
+  animation: colorChange 6s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: blue;
+  }
+  33% {
+    background-color: green;
+  }
+  66% {
+    background-color: black;
+  }
+  100% {
+    background-color: blue;
+  }
 }
