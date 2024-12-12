@@ -245,8 +245,12 @@ footer {
 
 .letter:nth-child(even) {
   animation-delay: 0.4s;
-}  header {
+}
+
+header {
   animation: colorChange 6s infinite;
+  font-size: 36px; /* Default font size for larger screens */
+  text-align: center; /* Ensure it's centered */
 }
 
 @keyframes colorChange {
@@ -261,5 +265,18 @@ footer {
   }
   100% {
     background-color: blue;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 24px; /* Smaller font size for mobile */
+    padding: 10px;   /* Adjust padding for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 18px; /* Even smaller for very small screens */
   }
 }
