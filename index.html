@@ -30,13 +30,12 @@
         <li><a href="#contact-us">Contact Us</a></li>
       </ul>
     </nav>
-    <h1 class="hero-title">Welcome to The Rise Bakery</h1>
-  </header>
-
+ <h1 class="hero-title">The Rise Bakery</h1>
+  </header> 
   <!-- Product Gallery Section -->
   <section id="product-gallery" class="product-gallery">
     <h2>Our Delicious Cakes</h2>
-      <p class="gallery-description"> At The Rise Bakery, we specialize in creating beautiful and delicious cakes for every occasion. What you see here is just a sample of our work—our stock is filled with even more delightful treats waiting for you. Visit us today to discover your favorite!"</p> 
+      <p class="gallery-description">welcome to the rise bakery, At The Rise Bakery, we specialize in creating beautiful and delicious cakes for every occasion. What you see here is just a sample of our work—our stock is filled with even more delightful treats waiting for you. Visit us today to discover your favorite!"</p> 
     <div class="cake-gallery">
       <div class="cake-item">
         <img src="cupcakes.jpeg" alt="Cupcakes">
@@ -96,7 +95,7 @@
   <p>Email: <a href="mailto:nadjibharera@gmail.com">nadjibharera@gmail.com</a></p>
   <p>Call us: <a href="tel:+250787162701">+250 787162701</a></p>
   <p>WhatsApp: <a href="https://wa.me/250787162701" target="_blank">Click to Message</a></p>
-  <p>Location: <a href="https://maps.app.goo.gl/QQnjkBEyi6b4Rmoj6" target="_blank">View on Google Maps</a></p>
+  <p>Location: <a href="https://maps.app.goo.gl/QQnjkBEyi6b4Rmoj6" target="_blank">check us on map</a></p>
 </section>
 <footer>
   <p>Copyright © 2024 The Rise Bakery</p>
@@ -105,5 +104,21 @@
   <img src="whatsapp-icon.png" alt="WhatsApp">
 </a>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heroTitle = document.querySelector(".hero-title");
+    const text = heroTitle.textContent.trim();
+    heroTitle.innerHTML = text
+      .split("")
+      .map(char => {
+        if (char === " ") {
+          return `<span class="letter" style="margin-right: 10px;">&nbsp;</span>`;
+        } else {
+          return `<span class="letter">${char}</span>`;
+        }
+      })
+      .join("");
+  });
+</script>
 
 </html>
