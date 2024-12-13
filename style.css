@@ -225,27 +225,6 @@ footer {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-@keyframes snake-move {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.letter {
-  display: inline-block;
-  animation: snake-move 2s ease-in-out infinite;
-}
-
-.letter:nth-child(odd) {
-  animation-delay: 0.2s;
-}
-
-.letter:nth-child(even) {
-  animation-delay: 0.4s;
-}
 
 header {
   animation: colorChange 6s infinite;
