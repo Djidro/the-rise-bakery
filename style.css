@@ -1,26 +1,4 @@
  /* Other existing styles */
-
-/* Add the new keyframes and header animation styles here */
-@keyframes moveTextLoop {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-family: 'Georgia', serif;
-  color: white;
-  margin-top: 10px;
-  display: inline-block;
-  animation: moveTextLoop 10s linear infinite;
-  white-space: nowrap; /* Prevents text from wrapping to the next line */
-}
-
-
 .hero-title {
   font-size: 2.5rem;
   font-family: 'Georgia', serif;
