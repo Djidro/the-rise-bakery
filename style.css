@@ -1,261 +1,173 @@
- /* Other existing styles */
-.hero-title {
-  font-size: 2rem; /* Adjusted font size to make it smaller */
-  font-family: 'Georgia', serif;
-  color: white;
-  margin-top: 10px;
-  display: inline-block;
-  animation: moveText 3s ease-in-out;
-}
+/* style.css */
 
-                                           /* General Styles */
+/* Reset & Base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   color: #333;
+  background: #fafafa;
 }
+a { text-decoration: none; color: inherit; }
+img, video { max-width: 100%; display: block; }
 
+/* Header */
 header {
-  background-color: green;
-  color: white;
+  background: #000;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 2rem 1rem;
+  position: relative;
 }
-
 .header-logo img {
-  width: 100px; /* Smaller logo size */
-  display: block;
-  margin: 0 auto;
+  width: 80px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
-
-.hero-title {
-  font-size: 2.5 rem;
-  font-family: 'Georgia', serif;
-  color: white;
-  margin-top: 10px;
-}
-
-.navbar ul {
+nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  gap: 2rem;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+nav ul li a:hover {
+  background: #f8b400;
+  color: #000;
+  border-radius: 4px;
 }
 
-.navbar ul li {
-  margin: 0 15px;
+/* Hero Title & Dancing Effect */
+.hero-title {
+  font-size: 3rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.letter {
+  display: inline-block;
+  animation: dance 0.6s ease-in-out infinite both;
+}
+@keyframes dance {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  padding: 5px 10px;
+/* Section Headings */
+section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section h2 {
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.navbar ul li a:hover {
-  background-color: #f8b400;
-  border-radius: 5px;
-}
-
-/* Gallery Section */
+/* Cake Gallery */
 .cake-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  background-color: white; /* Adds a black background */
-  color: black; /* Ensures text is visible on the black background */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
-
-
-.cake-item img {
-  width: 100%;
-  border-radius: 10px;
+.cake-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 .cake-item p {
-  text-align: center;
-  margin-top: 10px;
-}
-.gallery-description {
-  text-align: center;
-  font-size: 1.1rem;
-  color: black; /* Change text color to white for better visibility on a black background */
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
-  background-color: white; /* Adds a black background */
-  padding: 10px; /* Adds padding to avoid text touching the edges */
-  border-radius: 5px; /* Optional: Adds rounded corners for a cleaner look */
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #555;
 }
 
-
-/* Services Section */
-.services {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #white;
+/* Services */
+.services .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
-
 .service-item {
-  background-color:white; /* Sets the background to black */
-  color: black; /* Optional: Adjusts text color to ensure visibility */
-  padding: 20px; /* Optional: Adds spacing around the content */
-  border-radius: 8px; /* Keeps the rounded corners */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+}
+.service-item h3 {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+.service-item p {
+  padding: 0 1rem 1rem;
+  color: #555;
 }
 
-.service-item img {
-  width: 100%;
-  height: auto;
+/* About & Why Choose Us */
+.about-us, .why-choose-us {
+  text-align: center;
+}
+.about-us p, .why-choose-us p {
+  max-width: 800px;
+  margin: 1rem auto;
+  color: #555;
+}
+.why-choose-us video {
+  margin: 1rem auto;
   border-radius: 8px;
 }
 
-
-/* About Us Section */
-.about-us {
-  background-color: white; /* Sets the background color to black */
-  color: black; /* Changes the text color to white for better visibility */
-  padding: 20px; /* Adds padding around the content */
-}
-
-.about-us img {
-  width: 100%; /* Makes the image span the full width of the container */
-  max-width: 500px; /* Limits the width to a max of 500px to keep it proportional */
-  display: block;
-  margin: 0 auto; /* Centers the image */
-  border-radius: 8px; /* Optional: adds rounded corners to match the style of other images */
-}
-
-
-/* Why Choose Us Section */
-.why-choose-us {
-  background-color: white; /* Sets the background color to black */
-  color: black; /* Ensures text is visible against the black background */
-  padding: 20px; /* Adds padding around the content */
-}
-
-.why-choose-us video {
-  width: 100%;
-  max-width: 500px; /* Limits the width to a max of 500px */
-  display: block;
-  margin: 0 auto; /* Centers the video */
-  border-radius: 10px; /* Optional: adds rounded corners */
-}
-
-/* Contact Us Section */
+/* Contact */
 .contact-us {
-  background-color: black; /* Sets the background color to black */
-  color: white; /* Ensures text is visible against the black background */
-  padding: 20px; /* Adds padding inside the section for spacing */
+  background: #333;
+  color: #fff;
+  text-align: center;
 }
-
+.contact-us p {
+  margin: 0.5rem 0;
+}
 .contact-us a {
-  color: #f8b400; /* Keeps the link color as yellow */
-  text-decoration: none; /* Removes the underline from links */
-}
-
-.contact-us a:hover {
-  color: #f88b00; /* Changes the link color when hovered */
-}
-
-
-.contact-us a:hover {
-  color: #black;
+  color: #f8b400;
 }
 
 /* Footer */
 footer {
-  background-color: white;
-  color: black;
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-  }
-
-  .cake-gallery {
-    grid-template-columns: 1fr;
-  }
-} .whatsapp-icon {
+/* WhatsApp Icon */
+.whatsapp-icon {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  z-index: 1000;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 50px; height: 50px;
 }
-
 .whatsapp-icon img {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
-
-.whatsapp-icon:hover {
+.whatsapp-icon img:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 
-
-header {
-  animation: colorChange 6s infinite;
-  font-size: 36px; /* Default font size for larger screens */
-  text-align: center; /* Ensure it's centered */
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.2rem; }
+  nav ul { flex-direction: column; gap: 1rem; }
 }
-
-@keyframes colorChange {
-  0% {
-    background-color: blue;
-  }
-  33% {
-    background-color: green;
-  }
-  66% {
-    background-color: black;
-  }
-  100% {
-    background-color: blue;
-  }
-/* General smartphone styles (covers most Android and small-screen devices) */
-@media (max-width: 480px) {
-  header {
-    font-size: 18px;
-    padding: 8px;
-    background-color: lightgrey; /* Example adjustment */
-  }
-
-  /* Other smartphone-specific styles */
-  .hero-title {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
-
-/* Specific iPhone styles (targets iPhones by pixel ratio and screen size) */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 428px) 
-  and (-webkit-device-pixel-ratio: 2), 
-  (-webkit-device-pixel-ratio: 3) {
-  header {
-    font-size: 20px;
-    padding: 10px;
-    background-color: lightblue; /* Example for iPhones */
-  }
-
-  /* Other iPhone-specific adjustments */
-  .hero-title {
-    font-size: 2.2rem;
-    line-height: 1.4;
-  }
-}
-
