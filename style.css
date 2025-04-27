@@ -44,14 +44,32 @@ section h2 { font-size: 2.5rem; color: #000; text-align: center; margin-bottom: 
 .contact-us { background: #333; color: #fff; text-align: center; }
 .contact-us p { margin: 0.5rem 0; }
 .contact-us a { color: #f8b400; }
-
 /* Footer */
-footer { text-align: center; padding: 1rem; background: #000; color: #fff; }
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+}
 
-/* WhatsApp Icon */
-.whatsapp-icon { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 50px; height: 50px; }
-.whatsapp-icon img { width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.3s; }
-.whatsapp-icon img:hover { transform: scale(1.1); }
+/* Call Us Icon */
+.call-icon {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+}
+.call-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.call-icon img:hover {
+  transform: scale(1.1);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
