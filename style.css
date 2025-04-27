@@ -8,6 +8,10 @@ img, video { max-width: 100%; display: block; }
 header { background: #000; color: #fff; padding: 2rem 1rem; }
 .hero-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
 .hero-title { font-size: 3rem; }
+.header-logo {
+  width: 120px;
+  height: auto;
+}
 .navigation ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; text-align: right; }
 .navigation ul li a { text-transform: lowercase; font-size: 0.9rem; font-weight: 500; color: #fff; }
 .navigation ul li a:hover { color: #f8b400; }
