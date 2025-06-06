@@ -3,259 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Bakes</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #fafafa;
-      padding-top: 120px; /* space for fixed header */
-    }
-    a { text-decoration: none; color: inherit; }
-    img, video { max-width: 100%; display: block; }
-
-    /* Fixed Header */
-    header {
-      background: #000;
-      color: #fff;
-      padding: 2rem 1rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-    }
-    .hero-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .header-logo {
-      width: 60px;
-      height: auto;
-    }
-    .hero-title {
-      font-size: 3rem;
-    }
-
-    /* Hero Title & Dancing Effect */
-    .letter {
-      display: inline-block;
-      animation: dance 0.6s ease-in-out infinite both;
-    }
-    @keyframes dance {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(-8px); }
-    }
-
-    /* Section Headings */
-    section {
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    section h2 {
-      font-size: 2.5rem;
-      color: #000;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Cake Gallery */
-    .cake-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .cake-item {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .cake-item p {
-      padding: 1rem;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* Services */
-    .services .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .service-item {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-    .service-item h3 {
-      font-size: 1.3rem;
-      margin: 1rem;
-    }
-    .service-item p {
-      padding: 0 1rem 1rem;
-      color: #555;
-    }
-
-    /* About & Why Choose Us */
-    .about-us, .why-choose-us {
-      text-align: center;
-    }
-    .about-us p, .why-choose-us p {
-      max-width: 800px;
-      margin: 1rem auto;
-      color: #555;
-    }
-    .why-choose-us video {
-      margin: 1rem auto;
-      border-radius: 8px;
-    }
-
-    /* Contact */
-    .contact-us {
-      background: #333;
-      color: #fff;
-      text-align: center;
-    }
-    .contact-us p {
-      margin: 0.5rem 0;
-    }
-    .contact-us a {
-      color: #f8b400;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #000;
-      color: #fff;
-    }
-
-    /* Floating WhatsApp Icon */
-    .whatsapp-icon {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      width: 50px;
-      height: 50px;
-    }
-    .whatsapp-icon img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-    .whatsapp-icon img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      body { padding-top: 140px; }
-      .hero-container { flex-direction: column; gap: 0.5rem; }
-      .hero-title { font-size: 2.5rem; }
-    }
-  </style>
+  <title>Royal Bakes - Artisanal Bakery</title>
+  <meta name="description" content="Premium custom cakes and baking classes in Rwanda">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="hero-container">
-      <img src="" alt="Royal Bakes Logo" class="header-logo">
-      <h1 class="hero-title">Royal Bakes</h1>
+      <div class="header-branding">
+        <img src="new.jpeg" alt="Royal Bakes Logo" class="header-logo">
+        <h1 class="hero-title">Royal Bakes</h1>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#product-gallery">Cakes</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#contact-us">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <section id="product-gallery">
-    <h2>Our Delicious Cakes</h2>
+    <h2><span class="section-icon"><i class="fas fa-crown"></i></span>Our Signature Creations</h2>
     <div class="cake-gallery">
       <div class="cake-item">
-        <img src="cupcakes.jpeg" alt="Cupcakes">
+        <div class="image-container">
+          <img src="cupcakes.jpeg" alt="Cupcakes" loading="lazy">
+        </div>
         <p>Freshly baked cupcakes with velvety frosting and delightful flavors. Perfect for any celebration!</p>
       </div>
       <div class="cake-item">
-        <img src="weeding.jpeg" alt="Wedding Cake">
+        <div class="image-container">
+          <img src="weeding.jpeg" alt="Wedding Cake" loading="lazy">
+        </div>
         <p>Exquisite wedding cakes crafted to your vision, ensuring a memorable centerpiece for your special day.</p>
       </div>
       <div class="cake-item">
-        <img src="chocole.jpeg" alt="Chocolate Cake">
+        <div class="image-container">
+          <img src="chocole.jpeg" alt="Chocolate Cake" loading="lazy">
+        </div>
         <p>Decadent chocolate cakes made with premium cocoa and ganache for the ultimate indulgence.</p>
       </div>
     </div>
   </section>
 
   <section id="services" class="services">
-    <h2>Our Services</h2>
+    <h2><span class="section-icon"><i class="fas fa-award"></i></span>Our Premium Services</h2>
     <div class="service-list">
       <div class="service-item">
+        <div class="service-icon"><i class="fas fa-ring"></i></div>
         <h3>Wedding Arrangements</h3>
-        <img src="Photo1.jpeg.jpg" alt="Wedding Arrangements">
+        <img src="Photo1.jpeg.jpg" alt="Wedding Arrangements" loading="lazy">
         <p>Create unforgettable memories with personalized wedding cakes tailored to your style.</p>
       </div>
       <div class="service-item">
+        <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
         <h3>Cake School</h3>
-        <img src="ubukwe2.jpeg.jpg" alt="Professional Cake School">
+        <img src="ubukwe2.jpeg.jpg" alt="Professional Cake School" loading="lazy">
         <p>Hands-on classes to master cake-making techniques, from beginner to pro.</p>
       </div>
       <div class="service-item">
+        <div class="service-icon"><i class="fas fa-truck"></i></div>
         <h3>Delivery</h3>
-        <img src="delivery.jpg" alt="Delivery Services">
+        <img src="delivery.jpg" alt="Delivery Services" loading="lazy">
         <p>Fast, reliable delivery ensuring your cakes arrive fresh and on time.</p>
       </div>
     </div>
   </section>
 
   <section id="about-us" class="about-us">
-    <h2>About Royal Bakes</h2>
-    <img src="logo.jpeg" alt="Royal Bakes Logo" width="150">
-    <p>We are a passionate team of bakers dedicated to crafting unforgettable cakes for every occasion using the finest ingredients.</p>
+    <h2><span class="section-icon"><i class="fas fa-heart"></i></span>Our Story</h2>
+    <div class="about-content">
+      <img src="logo.jpeg" alt="Royal Bakes Logo" width="150" class="about-logo">
+      <p>Founded in 2020, Royal Bakes is a passionate team of artisanal bakers dedicated to crafting unforgettable cakes for every occasion using the finest ingredients. Our journey began with a simple love for baking and has grown into a thriving community of cake enthusiasts.</p>
+    </div>
   </section>
 
   <section id="why-choose-us" class="why-choose-us">
-    <h2>Why Choose Us</h2>
-    <video controls src="VID-20241206-WA0035.mp4"></video>
-    <p>Combining creativity, quality, and reliable service, we deliver stunning and delicious cakes that delight every time.</p>
+    <h2><span class="section-icon"><i class="fas fa-star"></i></span>The Royal Difference</h2>
+    <div class="video-container">
+      <video controls src="VID-20241206-WA0035.mp4" poster="video-poster.jpg" class="feature-video"></video>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item">
+        <i class="fas fa-leaf"></i>
+        <h3>Premium Ingredients</h3>
+        <p>We source only the finest, freshest ingredients for superior taste</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Artistic Designs</h3>
+        <p>Custom creations tailored to your unique vision</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-medal"></i>
+        <h3>Award-Winning</h3>
+        <p>Recognized for excellence in baking craftsmanship</p>
+      </div>
+    </div>
   </section>
-<section id="contact-us" class="contact-us">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:nadjibharera@gmail.com">Contact Us</a></p>
-    <p>Phone: <a href="tel:+250795859464">Call Us</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/the_royal.bakes" target="_blank">Follow Us</a></p>
-</section>
- <footer>
-    <p>&copy; 2024 Royal Bakes nn</p>
+
+  <section id="contact-us" class="contact-us">
+    <h2><span class="section-icon"><i class="fas fa-envelope"></i></span>Let's Connect</h2>
+    <div class="contact-methods">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p>Email: <a href="mailto:nadjibharera@gmail.com">nadjibharera@gmail.com</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p>Phone: <a href="tel:+250795859464">+250 795 859 464</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-instagram"></i>
+        <p>Instagram: <a href="https://www.instagram.com/the_royal.bakes" target="_blank">@the_royal.bakes</a></p>
+      </div>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="logo.jpeg" alt="Royal Bakes Logo" width="80">
+        <h3>Royal Bakes</h3>
+      </div>
+      <div class="footer-links">
+        <a href="#product-gallery">Our Cakes</a>
+        <a href="#services">Services</a>
+        <a href="#about-us">About</a>
+        <a href="#contact-us">Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/the_royal.bakes" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:nadjibharera@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+250795859464"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Royal Bakes. All rights reserved.</p>
+    </div>
   </footer>
 
-  <a href="tel:+250795859464" target="_blank" class="call-icon">
-  <img src="call-icon.png" alt="Call Us">
-</a>
+  <a href="https://wa.me/250795859464" target="_blank" class="whatsapp-icon">
+    <img src="whatsapp-icon.png" alt="Chat on WhatsApp">
+  </a>
 
+  <a href="tel:+250795859464" class="call-icon">
+    <img src="call-icon.png" alt="Call Us">
+  </a>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const hero = document.querySelector('.hero-title');
-      const text = hero.textContent.trim().split('');
-      hero.innerHTML = '';
-      text.forEach((char, i) => {
-        const span = document.createElement('span');
-        span.textContent = char === ' ' ? '\u00A0' : char;
-        span.classList.add('letter');
-        span.style.animationDelay = `${i * 0.1}s`;
-        hero.appendChild(span);
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
